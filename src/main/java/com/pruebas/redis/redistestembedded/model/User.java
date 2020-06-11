@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.util.UUID;
 
@@ -17,5 +18,7 @@ import java.util.UUID;
 public class User {
     @Id
     private UUID id;
+
+    @Indexed
     private String name;
 }
